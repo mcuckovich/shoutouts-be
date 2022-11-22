@@ -10,6 +10,7 @@ const errorResponse = (error: any, res: any) => {
   res.status(500).json({ message: "Internal Server Error" });
 };
 
+// get all shoutouts
 shoutoutRouter.get("/", async (req, res) => {
   try {
     const client = await getClient();
